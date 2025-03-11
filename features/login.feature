@@ -8,3 +8,5 @@ Feature: Login Functionality
     When I enter "standard_user" as username and "secret_sauce" as password
     And I click the login button
     Then I should see the dashboard
+    When I clicked on the Add to cart button
+    Then I clicked on the Shopping cart badge icon

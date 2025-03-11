@@ -8,9 +8,6 @@ from pages.products_page import ProductsPage
 
 @given('I am on the login page')
 def step_open_login_page(context):
-    # context.playwright = sync_playwright().start()
-    # context.browser = context.playwright.chromium.launch(headless=False)
-    context.page = context.browser.new_page()
     expect.set_options(timeout=8000)
     context.page.goto("https://www.saucedemo.com/")
 

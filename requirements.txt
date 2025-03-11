@@ -1,3 +1,4 @@
 playwright
 behave
-behave-parallel
+pytest
+pytest-xdist

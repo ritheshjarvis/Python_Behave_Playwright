@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from playwright.sync_api import Page
+
 
 @dataclass(frozen=True)
 class Locators:
@@ -13,3 +15,12 @@ class Locators:
     @staticmethod
     def product_page_title(page):
         return page.locator("[data-test = 'title']")
+
+    # Home Page
+    @staticmethod
+    def button_add_to_cart(page: Page):
+        return page.locator('#add-to-cart-sauce-labs-bolt-t-shirt')
+
+    @staticmethod
+    def icon_shopping_cart_badge(page: Page):
+        return page.locator('.shopping_cart_badge')

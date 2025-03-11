@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 def before_all(context):
     browser_name = os.getenv("BROWSER", context.config.userdata.get("browser", "chromium"))
-    print(f"----------------> {browser_name}")
+    print("----------------> {browser_name}")
     context.playwright = sync_playwright().start()
     if browser_name == "firefox":
         context.browser = context.playwright.firefox.launch(headless=False)
