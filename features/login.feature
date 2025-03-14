@@ -10,3 +10,11 @@ Feature: Login Functionality
     Then I should see the dashboard
     When I clicked on the Add to cart button
     Then I clicked on the Shopping cart badge icon
+    When I clicked on the Checkout button
+    Then 'Chekout: Your Information' page is displayed
+    When I enter 'First Name' as "Rithesh"
+    And I enter 'Last Name' as "B Rao"
+    And I enter 'Zip Postal Code' as "575007"
+    And I clicks 'Continue' button
+    And I clicks 'Finish' button
+    Then 'Thank you for your order!' message is displayed

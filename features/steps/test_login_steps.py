@@ -3,7 +3,7 @@ import time
 from playwright.sync_api import sync_playwright, expect
 from behave import given, when, then
 from pages.login_page import LoginPage
-from pages.products_page import ProductsPage
+from pages.products_or_home_page import ProductsHomePage
 
 
 @given('I am on the login page')
@@ -24,5 +24,5 @@ def step_click_login_button(context):
 
 @then('I should see the dashboard')
 def step_verify_dashboard(context):
-    context.products_page = ProductsPage(context.page)
+    context.products_page = ProductsHomePage(context.page)
     expect(context.products_page.validate_product_page(), 'Product title not visible').to_be_visible()
