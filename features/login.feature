@@ -1,13 +1,20 @@
 Feature: Login Functionality
   As a user,
   I want to log into the application
-  So that I can access my account.
+  I want to add a single product to my cart
+  I want to perform Checkout
 
-  Scenario: Successful login with valid credentials
+  Scenario: Successful Login feature verification
     Given I am on the login page
     When I enter "standard_user" as username and "secret_sauce" as password
     And I click the login button
-    Then I should see the dashboard
+    Then I should see the product home page
+
+  Scenario: Successful Checkout feature verification
+    Given I am on the login page
+    When I enter "standard_user" as username and "secret_sauce" as password
+    And I click the login button
+    Then I should see the product home page
     When I clicked on the Add to cart button
     Then I clicked on the Shopping cart badge icon
     When I clicked on the Checkout button

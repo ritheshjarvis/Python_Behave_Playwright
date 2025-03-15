@@ -2,3 +2,5 @@ playwright
 behave
 pytest
 pytest-xdist
+behave-html-formatter
+allure-behave

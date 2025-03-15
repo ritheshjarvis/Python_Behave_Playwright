@@ -22,7 +22,7 @@ def step_click_login_button(context):
     context.login_page.click_login_button()
 
 
-@then('I should see the dashboard')
+@then('I should see the product home page')
 def step_verify_dashboard(context):
     context.products_page = ProductsHomePage(context.page)
     expect(context.products_page.validate_product_page(), 'Product title not visible').to_be_visible()
